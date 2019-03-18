@@ -1,0 +1,17 @@
+
+<app-menu-administrador></app-menu-administrador>
+
+<h2> Alterar :{{setor.nome}}</h2>
+
+<b>Nome:</b>
+<br/>
+<input  [(ngModel)]= "setor.nome"  id ="nomeSiape" type="text" pInputText placeholder="digite o nome setor"/>
+<br/> 
+<br/> 
+<h2> Adicionar um coordenador:</h2>
+<b>Usuarios:</b>
+<br>
+<p-dropdown [options]="usuarios" [(ngModel)]="coordenadorAdicionado" optionLabel="nome"  #selectUsuarios></p-dropdown>
+<br/> 
+<br>
+<button  pButton  type = "botão"  label = " atualizar "  (click) = ' atualizarSetor() ' > </button >

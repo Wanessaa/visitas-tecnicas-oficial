@@ -1,0 +1,34 @@
+<div *ngIf="ehCoordenador">
+    <app-menu-coordenador></app-menu-coordenador>
+    <h2>Visitas desse servidor</h2>
+</div>
+
+<div *ngIf="ehServidor">
+    <app-menu-usuario></app-menu-usuario>
+    <h2>Suas visitas</h2>
+</div>
+
+<p-table [value]="viagens">
+  <ng-template pTemplate="header">
+      <tr>
+          <th>Turma</th> 
+          <th>Destino</th>
+          <th>Excluir</th>
+          <th>Alterar </th>
+
+          
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-viagem> 
+      <tr>
+
+          <td> <a [routerLink]="['/visita/visualizacao', viagem.id]">  {{viagem.turma}} </a> </td>
+          <td> <a [routerLink]="['/visita/visualizacao', viagem.id]"> {{viagem.cidade}} </a> </td>
+          <td>  <p-button  (click)="deletar(viagem)">Deletar</p-button>  </td>
+          <td>  <p-button (click)= "irParaAlterar(viagem.id)">alterar</p-button>  </td>
+          
+
+      </tr>
+      
+  </ng-template>
+</p-table>

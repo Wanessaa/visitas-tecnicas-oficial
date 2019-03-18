@@ -1,0 +1,36 @@
+<p align=center><img src="marca.png"/> </p> 
+<router-outlet></router-outlet>
+<h1> Cadastro</h1>
+<b>Nome:</b>
+<br/>
+<input  [(ngModel)]= "usuario.nome"  id ="usuarioNome" type="text" pInputText placeholder="digite seu nome"/>
+<br/> 
+<br/> 
+<b>Siape:</b>
+<br/>
+<input  [(ngModel)]= "usuario.siape"  id ="usuarioSiape" type="text" pInputText placeholder="7 dígitos"/> 
+<br/> 
+<br/> 
+<b>Senha:</b>
+<br/> 
+<input  [(ngModel)]= "usuario.senha"  id ="usuarioSenha" type="password" pInputText placeholder="ex:4321"/>
+<br/> 
+<br/>
+<b>Setor:</b>
+<br/> 
+<p-dropdown [options]="setores" [(ngModel)]="setorEscolhido" optionLabel="nome"></p-dropdown>
+
+
+
+
+<br/> 
+<br/>  
+<br/> 
+<button pButton type="button" label="cadastrar" (click) = 'salvar()' ></button> 
+<!-- <button pButton type="button" label="Login" (click) = 'irTelaLogin()' ></button> -->
+
+
+
+
+
+

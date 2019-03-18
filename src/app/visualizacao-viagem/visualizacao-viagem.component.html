@@ -1,0 +1,43 @@
+<div *ngIf="ehCoordenador">
+    <app-menu-coordenador></app-menu-coordenador>
+</div>
+
+<div *ngIf="ehServidor">
+    <app-menu-usuario></app-menu-usuario>  
+</div>
+
+<h2> VISITA TÉCNICA</h2>
+<p-table [value]="viagensTecnicas">   
+    <ng-template pTemplate="header">
+       
+            
+       
+    </ng-template>
+    <ng-template pTemplate="body" let-viagemTecnica>
+        <tr> <td> <b>Empresa/Evento(*):</b> {{viagemTecnica.empresa}} </td> </tr>
+        <tr> <td> <b>Cidade/Local:</b>{{viagemTecnica.cidade}} </td> </tr>
+        <tr> <td> <b>Roteiro:</b>{{viagemTecnica.roteiro }} </td> </tr>
+        <tr> <td> <b>Data/Período: </b>{{viagemTecnica.data }}</td> </tr>
+        <tr> <td> <b>Horário:</b>{{viagemTecnica.HorarioSaida }} - {{viagemTecnica.HorarioRetorno }} </td> </tr>
+        <tr> <td> <b>Professor (es) Responsável (is):</b>{{viagemTecnica.professor }}</td> </tr>
+        <tr> <td> <b>Componente(s) Curricular(es):</b>{{viagemTecnica.componente }} </td> </tr>
+        <tr> <td> <b>Conteúdo Programático:</b>{{viagemTecnica.conteudo }} </td> </tr>
+        <tr> <td> <b>Carga Horária:</b>{{viagemTecnica.cargaHoraria }} </td> </tr>
+        <tr> <td> <b>Turma:</b>{{viagemTecnica.turma }} </td> </tr>
+        <tr> <td> <b>Quantitativo de Estudantes:</b>{{viagemTecnica.quantidadeAlunos }} </td> </tr>
+        <tr> <td> <b>Hospedagem(se houver):</b>{{viagemTecnica.hospedagem }} </td> </tr>
+        <tr> <td> <b>Enderenço:</b>{{viagemTecnica.enderenco }}</td> </tr>
+        <tr> <td> <b>Outros Servidores</b>{{viagemTecnica.servidores }} </td> </tr>
+        <tr> <td> <b>Justificativa(s):</b>{{viagemTecnica.justificativa }} </td> </tr>
+        <tr> <td> <b>Objetivos(s):</b>{{viagemTecnica.objetivos }}</td> </tr>
+        <tr> <td> <b>Metodologia:</b>{{viagemTecnica.metodologia }}</td> </tr>
+        <tr> <td> <b>Formas de avaliação da aprendizagem</b>{{viagemTecnica.formasAprendizagem}} </td> </tr>
+
+  <div *ngIf="ehCoordenador">
+    <br>
+    <b>Parecer:</b>
+    <input  [(ngModel)]= "Parecer.parecer"  id ="Parecer" type="text" pInputText placeholder="digite o parecer"/>
+    <p-button (click)= "salvar(viagemTecnica.id)">Salvar</p-button>  
+</div>
+</ng-template>
+</p-table>
