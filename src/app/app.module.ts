@@ -26,6 +26,7 @@ import {TabMenuModule} from 'primeng/tabmenu';
 import { CadastrarCoordenadorComponent } from './cadastrar-coordenador/cadastrar-coordenador.component';
 import { CoordenadorService } from './servicos/coordenador.service';
 import { MenuAdmComponent } from './menu-adm/menu-adm.component';
+import {InputTextareaModule} from 'primeng/inputtextarea';
 
 
 
@@ -143,10 +144,11 @@ export const rotas : Routes = [
     CalendarModule,
     BrowserAnimationsModule,
     ToastModule,
-    DropdownModule
+    DropdownModule,
     // MessageServiceDemo,
       //MessageService,
     //Message
+    InputTextareaModule
     
     
    

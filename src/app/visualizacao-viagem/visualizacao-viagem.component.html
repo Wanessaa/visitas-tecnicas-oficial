@@ -35,9 +35,11 @@
 
   <div *ngIf="ehCoordenador">
     <br>
-    <b>Parecer:</b>
-    <input  [(ngModel)]= "Parecer.parecer"  id ="Parecer" type="text" pInputText placeholder="digite o parecer"/>
+    <b>Parecer:</b> <br>
+    <textarea [rows]="10" [cols]="60" placeholder="Digite aqui:" pInputTextarea [(ngModel)]="Parecer.parecer"></textarea>
+    <br>
     <p-button (click)= "salvar(viagemTecnica.id)">Salvar</p-button>  
+
 </div>
 </ng-template>
 </p-table>
