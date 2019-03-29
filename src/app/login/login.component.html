@@ -5,13 +5,19 @@
     <div class="ui-g">
       <div class="ui-g-5"></div>
       <div class="ui-inputgroup"> </div>
-      <input  [(ngModel)]= "usuario.siape"  id ="nomeSiape" type="text" pInputText placeholder="siape"/>
+      <div class="ui-inputgroup" style="margin-bottom:20px;">
+        <span class="ui-inputgroup-addon"><i class="fa fa-user"></i>Usuário</span>
+        <input type="text" pInputText [(ngModel)]="usuario.siape">
+      </div>
     </div>
 
     <div class="ui-g">
       <div class="ui-g-5"></div>
       <div class="ui-inputgroup"> </div>
-      <input  [(ngModel)]= "usuario.senha" id="senhaLogin" type="password" pInputText placeholder="Senha"/>
+      <div class="ui-inputgroup" style="margin-bottom:20px;">
+        <span class="ui-inputgroup-addon"><i class="fa fa-user"></i>Senha</span>
+        <input type="text" pInputText [(ngModel)]="usuario.senha">
+      </div>
     </div>
 
 
@@ -26,3 +32,5 @@
 
   </body>
 </html>
+
+
